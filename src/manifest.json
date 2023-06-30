@@ -1,0 +1,47 @@
+{
+  "manifest_version": 3,
+  "version": "1.0",
+  "name": "Password generator chrome extension",
+  "description": "Strong password generator with authentication",
+  "action": {
+    "default_popup": "./popup.html",
+    "default_icon": {
+      "16": "./src/icons/chrome-ext2-icon_16.png",
+      "32": "./src/icons/chrome-ext2-icon_32.png",
+      "48": "./src/icons/chrome-ext2-icon_48.png",
+      "128": "./src/icons/chrome-ext2-icon_128.png"
+    },
+    "default_title": "Password generator chrome extension"
+  },
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "identity"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ], 
+  "icons": {
+    "16": "./src/icons/chrome-ext2-icon_32.png",
+    "32": "./src/icons/chrome-ext2-icon_32.png",
+    "48": "./src/icons/chrome-ext2-icon_48.png",
+    "128": "./src/icons/chrome-ext2-icon_128.png"
+  },
+  "options_page": "options.html",
+  "oauth2": {
+    "client_id": "218892719714-17ujrn0oivav4bmu0rblqvu0cefm4lth.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email",
+      "https://www.googleapis.com/auth/userinfo.profile"
+    ]
+  },
+  "key": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnBuyjItxfROdfm5yZ8JUVUXQgcFdpwq5I1NUMskrwnv4ysXKmCf91b6YSmoaKaBUYMiY70i1kYvdu2v9b8Lj3Qka7s0Zs9q1NmsB9PfiRh1GW4jpAVWFzC4rTR55c7QNvQ6a3lipcgw2MR+f+E/xWLdejVJH3tNd7K9sH3J+n8IkMBrRNhRYzQuqLZ/aELip2PCJgTi9CqiAncGn2RQYlJdHYSGJjFMfPf7axu7Qryan2tsKIMJMb/pmVNNq+EfYbtAA5knu+hfnXpS0cYGxUuvD3XBE72bMAenS/ex8TDFWxrkhCmJXYbtytP8iKxXzo76lmF6GBEfruannvccNFQIDAQAB\n-----END PUBLIC KEY-----"  
+}

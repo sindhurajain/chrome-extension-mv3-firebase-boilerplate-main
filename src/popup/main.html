@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<head>
+    <meta charset=utf-8 />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase + MV3 Sample</title>
+    <link rel="stylesheet" href="./src/css/main.css">
+</head>
+<body>
+    <h1 class="h1title">Logged in</h1>
+
+
+
+    
+    <div class="conatiner">
+        <section class="settings-container">
+            <div class="setting">
+                <label for ="includeDigits">
+                    <span>Include digits </span>
+                    <span></span>
+                </label>
+                <input type="checkbox" id="includeDigits" checked>
+            </div>
+            <div class="setting">
+                <label for ="specialChar">
+                    <span>Include special characters</span>
+                    <span></span>
+                </label>
+                <input type="checkbox" id="specialChar">
+            </div>
+            <div class="setting">
+                <label for ="letterMix">
+                    <span>lowercase and uppercase letters</span>
+                    <span>(lowercase letters will always be used)</span>
+                </label>
+                <input type="checkbox" id="letterMix" checked>
+            </div>
+        </section>
+        
+        <section class="character-length">
+            <p>Your password will be <span id ="charLengthSpan">15</span> characters long</p>
+            <p>Move the slider to adjust the length of your password</p>
+            <input type="range" id="charLengthSlider" min="4" max="75" value="15"></input>
+        </section>
+
+        <section class="generated-password">
+            <input type="text" id="generatedPassword" spellcheck="false">
+            <button class="copy-password" id="copyPassword">copy</button>
+            <div class="confirmation" id="confirmation">
+                <p>password copied!</p>
+            </div>
+        </section>
+    </div>
+
+
+
+
+
+
+    <div id="sign_out">
+        <button class="btn btn__sign_out"><i class="fa fa-sign-out" title="Account Sign Out"></i>Log Out</button>
+    </div>
+
+</body>
+
+</html>
